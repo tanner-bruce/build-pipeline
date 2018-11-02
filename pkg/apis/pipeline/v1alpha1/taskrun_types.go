@@ -93,6 +93,7 @@ var taskRunCondSet = duckv1alpha1.NewBatchConditionSet()
 
 // TaskRunStatus defines the observed state of TaskRun
 type TaskRunStatus struct {
+	Results Results `json:"results"`
 	Steps []StepRun `json:"steps"`
 	// Conditions describes the set of conditions of this build.
 	Conditions duckv1alpha1.Conditions `json:"conditions,omitempty"`
